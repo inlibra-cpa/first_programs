@@ -18,5 +18,3 @@ age = years
 second = years * 365 * 24 * 60 * 60 
 second.to_s # this converts the result to a string, to print it
 puts "That's #{second} seconds."
-
-
