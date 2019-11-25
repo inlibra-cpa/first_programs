@@ -1,29 +1,14 @@
-puts "Enter key_word1"
-key_word1 = gets.to_s
-puts "Enter key_word2"
-key_word2 = gets.to_s
-puts "Enter key_word3"
-key_word3 = gets.to_s
-puts "Enter key_word4"
-key_word4 = gets.to_s
-puts "Enter key_word5"
-key_word5 = gets.to_s
-puts "Enter value_word1"
-value_word1 = gets.to_s
-puts "Enter value_word2"
-value_word2 = gets.to_s
-puts "Enter value_word3"
-value_word3 = gets.to_s
-puts "Enter value_word4"
-value_word4 = gets.to_s
-puts "Enter value_word5"
-value_word5 = gets.to_s
+keys = []
+values = []
+h = {}
 
-def hash_to_array(name, h)
-    print h.collect { |k, v| v }
+5.times do |i|
+  puts "Enter key #{i + 1}:" # this allows us to see 1,2,3 instead of 0,1,2
+  this_key = gets.to_s
+  puts "Enter value {i + 1}:" # same here
+  this_value = gets.to_s
+  # now we will build our hash with the given key and value
+  h[this_key] = this_value
 end
-h = {key_word1 => value_word1, key_word2 => value_word2, key_word3 => value_word3,
-  key_word4 => value_word4, key_word5 => value_word5}
-  
-puts h.keys
-puts h.values
+
+puts h
